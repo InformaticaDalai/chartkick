@@ -132,6 +132,14 @@
         options.colors = opts.colors;
       }
 
+      if(opts.y_axis_title) {
+        options.yAxis.title.text = opts.y_axis_title;
+      }
+
+      if(opts.tooltip_suffix) {
+        options.tooltip.valueSuffix = opts.tooltip_suffix;
+      }
+
       // merge library last
       options = merge(options, opts.library || {});
 
