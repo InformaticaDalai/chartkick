@@ -139,6 +139,10 @@
         options.tooltip.valueSuffix = opts.tooltip_suffix;
       }
 
+      if(opts.title) {
+        options.title = opts.title;
+      }
+
       // merge library last
       options = merge(options, opts.library || {});
 
