@@ -132,14 +132,12 @@
       }
 
       if(opts.y_axis_title) {
-        options.axes.y.label = opts.y_axis_title;
+        options.yAxis.title.text = opts.y_axis_title;
       }
 
-      /*
       if(opts.tooltip_suffix) {
-        options.tooltip. = opts.tooltip_suffix;
+        options.tooltip.valueSuffix = opts.tooltip_suffix;
       }
-      */
 
       if(opts.title) {
         options.chart.title = opts.title;
