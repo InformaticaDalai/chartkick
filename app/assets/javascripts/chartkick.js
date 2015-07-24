@@ -30,17 +30,20 @@
 
   // https://github.com/madrobby/zepto/blob/master/src/zepto.js
   function extend(target, source, deep) {
-    for (key in source)
+    for (var key in source) {
       if (deep && (isPlainObject(source[key]) || isArray(source[key]))) {
         if (isPlainObject(source[key]) && !isPlainObject(target[key]))
-          target[key] = {}
+          target[key] = {};
         if (isArray(source[key]) && !isArray(target[key]))
-          target[key] = []
-        extend(target[key], source[key], deep)
+          target[key] = [];
+        extend(target[key], source[key], deep);
+      } else {
+        if (source[key] !== undefined) {
+          target[key] = source[key];
+        }
       }
-      else if (source[key] !== undefined) target[key] = source[key]
+    }
   }
-
 
   function merge(obj1, obj2) {
     var target = {};
