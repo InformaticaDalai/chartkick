@@ -249,6 +249,9 @@
       var defaultOptions = {
         chart: {},
         xAxis: {
+          title: {
+            text: null
+          },
           labels: {
             style: {
               fontSize: "12px"
