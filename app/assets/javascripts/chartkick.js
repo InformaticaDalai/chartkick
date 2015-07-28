@@ -135,6 +135,10 @@
         options.yAxis.title.text = opts.y_axis_title;
       }
 
+      if (opts.x_axis_title) {
+        options.xAxis.title.text = opts.x_axis_title;
+      }
+
       if(opts.tooltip_suffix) {
         options.tooltip.valueSuffix = opts.tooltip_suffix;
       }
